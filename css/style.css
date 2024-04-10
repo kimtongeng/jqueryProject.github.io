@@ -1,8 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+/* html{
+    scroll-behavior: smooth;
+} */
 body{
     margin: 0;
     line-height: 1.5;
     background-color: #f3f2f1;
+    
 }
 body,input,textarea,button{
     font-family: "Raleway", sans-serif;
@@ -98,7 +102,7 @@ body,input,textarea,button{
     transition:  all 0.6s ease;
 
 }
-.preloader.loaded{
+.preloader .loaded{
     visibility: hidden;
     opacity: 0;
     z-index: -999;
@@ -501,15 +505,17 @@ opacity: 0;
     right: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.7);
-    display: flex;
+    /* display: flex; */
     align-items: center;
     justify-content: center;
     cursor: zoom-out;
     display: none;
 }
-.lightbox .open{
-    display: flex;
-
+.lightbox .img-box img{
+    width: 500px;
+}
+.open{
+    display: flex ;
 }
 
 .lightbox .lightbox-img{
@@ -554,10 +560,12 @@ opacity: 0;
 .lightbox .lightbox-controls .next{
     position: absolute;
     height: calc(100%-80%);
-    top: 40px;
+    top: 50%;
+    transform:translate(0,-50%) ;
     cursor: pointer;
     display: flex;
     align-items: center;
+    
 
 }
 .lightbox .lightbox-controls .prev{
@@ -570,7 +578,7 @@ opacity: 0;
     right: 0;
     width: 50%;
     justify-content: flex-end;
-    padding-right: 5px;
+  
 
 }
 .lightbox .lightbox-controls .prev img,
@@ -578,7 +586,6 @@ opacity: 0;
 {
     width: 30px;
     height: 30px;
-    padding: 5px;
     border-radius: 2px;
     transition:  all 0.5s;
 }
