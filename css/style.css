@@ -730,6 +730,9 @@ opacity: 0;
 }
 
 @media (max-width:767px) {
+    .home-section .home-content h2{
+        font-size: 50px;
+    }
     .header{
         padding:  7px 0;
         position: fixed;
